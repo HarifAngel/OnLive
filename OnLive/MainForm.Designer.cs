@@ -28,12 +28,54 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            sidePanel = new Panel();
+            panel1 = new Panel();
+            topPanel = new Panel();
+            SuspendLayout();
+            // 
+            // sidePanel
+            // 
+            sidePanel.BackColor = Color.FromArgb(96, 159, 151);
+            sidePanel.Location = new Point(25, 90);
+            sidePanel.Margin = new Padding(0);
+            sidePanel.Name = "sidePanel";
+            sidePanel.Size = new Size(162, 590);
+            sidePanel.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(38, 48, 79);
+            panel1.Location = new Point(12, 12);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(135, 61);
+            panel1.TabIndex = 2;
+            // 
+            // topPanel
+            // 
+            topPanel.BackColor = Color.FromArgb(96, 136, 159);
+            topPanel.Location = new Point(157, 12);
+            topPanel.Margin = new Padding(0);
+            topPanel.Name = "topPanel";
+            topPanel.Size = new Size(1262, 61);
+            topPanel.TabIndex = 1;
+            // 
+            // MainForm
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1428, 698);
+            Controls.Add(panel1);
+            Controls.Add(topPanel);
+            Controls.Add(sidePanel);
+            Name = "MainForm";
+            Text = "OnLive";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Panel sidePanel;
+        private Panel topPanel;
+        private Panel panel1;
     }
 }
