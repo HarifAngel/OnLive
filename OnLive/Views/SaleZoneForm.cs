@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OnLive.Views
 {
-    public partial class SaleZone : Form
+    public partial class SaleZoneForm : Form
     {
-        public SaleZone()
+        public SaleZoneForm()
         {
             InitializeComponent();
         }

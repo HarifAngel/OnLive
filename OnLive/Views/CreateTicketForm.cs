@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OnLive.Views
 {
-    public partial class CreateTicket : Form
+    public partial class CreateTicketForm : Form
     {
-        public CreateTicket()
+        public CreateTicketForm()
         {
             InitializeComponent();
         }

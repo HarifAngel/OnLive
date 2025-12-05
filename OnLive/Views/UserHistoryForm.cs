@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OnLive.Views
 {
-    public partial class UserHistory : Form
+    public partial class UserHistoryForm : Form
     {
-        public UserHistory()
+        public UserHistoryForm()
         {
             InitializeComponent();
         }

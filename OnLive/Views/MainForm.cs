@@ -19,37 +19,44 @@ namespace OnLive
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void panelRoundCorner1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+
+        private void labelOnLive_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void labelTitle_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void labelCreator_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelConfig_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelSales_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panelSide_Paint(object sender, PaintEventArgs e)
         {
 
         }
