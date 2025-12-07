@@ -34,20 +34,32 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(359, 218);
+            label1.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(396, 237);
             label1.Name = "label1";
-            label1.Size = new Size(53, 15);
-            label1.TabIndex = 1;
+            label1.Size = new Size(286, 86);
+            label1.TabIndex = 2;
             label1.Text = "Reportes";
             // 
-            // Reports
+            // ReportsForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1440, 733);
+            ControlBox = false;
             Controls.Add(label1);
-            Name = "Reports";
-            Text = "Reports";
+            FormBorderStyle = FormBorderStyle.None;
+            MaximizeBox = false;
+            MaximumSize = new Size(1440, 733);
+            MdiChildrenMinimizedAnchorBottom = false;
+            MinimizeBox = false;
+            Name = "ReportsForm";
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            StartPosition = FormStartPosition.Manual;
+            Text = "Reportes";
+            TopMost = true;
+            Load += ReportsForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

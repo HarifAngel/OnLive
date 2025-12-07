@@ -34,20 +34,32 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(230, 149);
+            label1.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(361, 210);
             label1.Name = "label1";
-            label1.Size = new Size(82, 15);
+            label1.Size = new Size(448, 86);
             label1.TabIndex = 0;
             label1.Text = "Zona de Venta";
             // 
-            // SaleZone
+            // SaleZoneForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1440, 733);
+            ControlBox = false;
             Controls.Add(label1);
-            Name = "SaleZone";
-            Text = "SaleZone";
+            FormBorderStyle = FormBorderStyle.None;
+            MaximizeBox = false;
+            MaximumSize = new Size(1440, 733);
+            MdiChildrenMinimizedAnchorBottom = false;
+            MinimizeBox = false;
+            Name = "SaleZoneForm";
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            StartPosition = FormStartPosition.Manual;
+            Text = "Zona de Venta";
+            TopMost = true;
+            Load += SaleZoneForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

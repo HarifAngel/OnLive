@@ -12,9 +12,18 @@ namespace OnLive.Views
 {
     public partial class UserHistoryForm : Form
     {
+        MainForm mainForm;
         public UserHistoryForm()
         {
             InitializeComponent();
+        }
+
+        private void UserHistoryForm_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+            mainForm = new MainForm();
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point((mainForm.ClientSize.Width - this.Width) / 2, (this.ClientSize.Height - this.Height) / 2);
         }
     }
 }

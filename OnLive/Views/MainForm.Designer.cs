@@ -34,15 +34,15 @@
             labelOnLive = new Label();
             panelSide = new Panel();
             panelSales = new PanelRoundCorner();
-            button3 = new Button();
+            label1 = new Label();
             panelClient = new PanelRoundCorner();
-            button4 = new Button();
+            label2 = new Label();
             panelCreateTicket = new PanelRoundCorner();
-            button1 = new Button();
+            label3 = new Label();
             panelReports = new PanelRoundCorner();
-            button5 = new Button();
+            label4 = new Label();
             panelConfig = new PanelRoundCorner();
-            button6 = new Button();
+            label5 = new Label();
             panelRoundCorner1.SuspendLayout();
             panelSide.SuspendLayout();
             panelSales.SuspendLayout();
@@ -124,29 +124,26 @@
             panelSales.BorderColor = Color.Transparent;
             panelSales.BorderRadius = 0;
             panelSales.BorderSize = 0;
-            panelSales.Controls.Add(button3);
+            panelSales.Controls.Add(label1);
             panelSales.FillColor = Color.FromArgb(40, 40, 40);
             panelSales.Location = new Point(0, 52);
             panelSales.Margin = new Padding(0);
             panelSales.Name = "panelSales";
             panelSales.Size = new Size(186, 57);
             panelSales.TabIndex = 14;
+            panelSales.Click += panelSales_Click;
             panelSales.Paint += panelSales_Paint;
             // 
-            // button3
+            // label1
             // 
-            button3.FlatAppearance.BorderSize = 0;
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(23, 0);
-            button3.Margin = new Padding(0);
-            button3.Name = "button3";
-            button3.Size = new Size(139, 57);
-            button3.TabIndex = 4;
-            button3.Text = "Zona de Venta";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button3_Click;
+            label1.AccessibleRole = AccessibleRole.StaticText;
+            label1.AutoSize = true;
+            label1.Font = new Font("Arial", 11F, FontStyle.Bold);
+            label1.Location = new Point(41, 20);
+            label1.Name = "label1";
+            label1.Size = new Size(109, 18);
+            label1.TabIndex = 14;
+            label1.Text = "Zona De Venta";
             // 
             // panelClient
             // 
@@ -154,30 +151,27 @@
             panelClient.BorderColor = Color.Transparent;
             panelClient.BorderRadius = 0;
             panelClient.BorderSize = 0;
-            panelClient.Controls.Add(button4);
+            panelClient.Controls.Add(label2);
             panelClient.FillColor = Color.FromArgb(40, 40, 40);
             panelClient.Location = new Point(0, 147);
             panelClient.Margin = new Padding(0);
             panelClient.Name = "panelClient";
             panelClient.Size = new Size(186, 57);
             panelClient.TabIndex = 14;
+            panelClient.Click += panelClient_Click;
+            panelClient.Paint += panelClient_Paint;
             // 
-            // button4
+            // label2
             // 
-            button4.BackColor = Color.Transparent;
-            button4.FlatAppearance.BorderSize = 0;
-            button4.FlatStyle = FlatStyle.Flat;
-            button4.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.White;
-            button4.ImageAlign = ContentAlignment.MiddleLeft;
-            button4.Location = new Point(23, 0);
-            button4.Margin = new Padding(0);
-            button4.Name = "button4";
-            button4.Padding = new Padding(5, 0, 0, 0);
-            button4.Size = new Size(139, 57);
-            button4.TabIndex = 4;
-            button4.Text = "Historial de Cliente";
-            button4.UseVisualStyleBackColor = false;
+            label2.AccessibleRole = AccessibleRole.StaticText;
+            label2.AutoSize = true;
+            label2.Enabled = false;
+            label2.Font = new Font("Arial", 11F, FontStyle.Bold);
+            label2.Location = new Point(23, 20);
+            label2.Name = "label2";
+            label2.Size = new Size(144, 18);
+            label2.TabIndex = 15;
+            label2.Text = "Historial de Cliente";
             // 
             // panelCreateTicket
             // 
@@ -185,28 +179,27 @@
             panelCreateTicket.BorderColor = Color.Transparent;
             panelCreateTicket.BorderRadius = 0;
             panelCreateTicket.BorderSize = 0;
-            panelCreateTicket.Controls.Add(button1);
+            panelCreateTicket.Controls.Add(label3);
             panelCreateTicket.FillColor = Color.FromArgb(40, 40, 40);
             panelCreateTicket.Location = new Point(0, 221);
             panelCreateTicket.Margin = new Padding(0);
             panelCreateTicket.Name = "panelCreateTicket";
             panelCreateTicket.Size = new Size(186, 57);
             panelCreateTicket.TabIndex = 14;
+            panelCreateTicket.Click += panelCreateTicket_Click;
+            panelCreateTicket.Paint += panelCreateTicket_Paint;
             // 
-            // button1
+            // label3
             // 
-            button1.BackColor = Color.Transparent;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(23, 0);
-            button1.Margin = new Padding(0);
-            button1.Name = "button1";
-            button1.Size = new Size(139, 57);
-            button1.TabIndex = 4;
-            button1.Text = "Crear Recibo   de Compra";
-            button1.UseVisualStyleBackColor = false;
+            label3.AccessibleRole = AccessibleRole.StaticText;
+            label3.AutoSize = true;
+            label3.Enabled = false;
+            label3.Font = new Font("Arial", 11F, FontStyle.Bold);
+            label3.Location = new Point(41, 11);
+            label3.Name = "label3";
+            label3.Size = new Size(106, 36);
+            label3.TabIndex = 15;
+            label3.Text = "Crear Recibo \r\n  de Compra";
             // 
             // panelReports
             // 
@@ -214,28 +207,27 @@
             panelReports.BorderColor = Color.Transparent;
             panelReports.BorderRadius = 0;
             panelReports.BorderSize = 0;
-            panelReports.Controls.Add(button5);
+            panelReports.Controls.Add(label4);
             panelReports.FillColor = Color.FromArgb(40, 40, 40);
             panelReports.Location = new Point(0, 297);
             panelReports.Margin = new Padding(0);
             panelReports.Name = "panelReports";
             panelReports.Size = new Size(186, 57);
             panelReports.TabIndex = 14;
+            panelReports.Click += panelReports_Click;
+            panelReports.Paint += panelReports_Paint;
             // 
-            // button5
+            // label4
             // 
-            button5.BackColor = Color.Transparent;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(23, 0);
-            button5.Margin = new Padding(0);
-            button5.Name = "button5";
-            button5.Size = new Size(139, 57);
-            button5.TabIndex = 4;
-            button5.Text = "Reportes";
-            button5.UseVisualStyleBackColor = false;
+            label4.AccessibleRole = AccessibleRole.StaticText;
+            label4.AutoSize = true;
+            label4.Enabled = false;
+            label4.Font = new Font("Arial", 11F, FontStyle.Bold);
+            label4.Location = new Point(58, 18);
+            label4.Name = "label4";
+            label4.Size = new Size(74, 18);
+            label4.TabIndex = 15;
+            label4.Text = "Reportes";
             // 
             // panelConfig
             // 
@@ -243,50 +235,57 @@
             panelConfig.BorderColor = Color.Transparent;
             panelConfig.BorderRadius = 0;
             panelConfig.BorderSize = 0;
-            panelConfig.Controls.Add(button6);
+            panelConfig.Controls.Add(label5);
             panelConfig.FillColor = Color.FromArgb(40, 40, 40);
             panelConfig.Location = new Point(0, 450);
             panelConfig.Margin = new Padding(0);
             panelConfig.Name = "panelConfig";
             panelConfig.Size = new Size(186, 57);
             panelConfig.TabIndex = 14;
+            panelConfig.Click += panelConfig_Click;
             panelConfig.Paint += panelConfig_Paint;
             // 
-            // button6
+            // label5
             // 
-            button6.BackColor = Color.Transparent;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Arial", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(23, 0);
-            button6.Margin = new Padding(0);
-            button6.Name = "button6";
-            button6.Size = new Size(139, 57);
-            button6.TabIndex = 4;
-            button6.Text = "Configuracion";
-            button6.UseVisualStyleBackColor = false;
+            label5.AccessibleRole = AccessibleRole.StaticText;
+            label5.AutoSize = true;
+            label5.Enabled = false;
+            label5.Font = new Font("Arial", 11F, FontStyle.Bold);
+            label5.Location = new Point(41, 20);
+            label5.Name = "label5";
+            label5.Size = new Size(108, 18);
+            label5.TabIndex = 15;
+            label5.Text = "Configuracion";
+            label5.Click += label5_Click;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.Inherit;
+            AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            AutoValidate = AutoValidate.Disable;
             ClientSize = new Size(1432, 698);
             Controls.Add(panelSide);
             Controls.Add(panelRoundCorner1);
             ForeColor = Color.White;
             IsMdiContainer = true;
+            MaximizeBox = false;
             Name = "MainForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "On Live";
             Load += MainForm_Load;
             panelRoundCorner1.ResumeLayout(false);
             panelRoundCorner1.PerformLayout();
             panelSide.ResumeLayout(false);
             panelSales.ResumeLayout(false);
+            panelSales.PerformLayout();
             panelClient.ResumeLayout(false);
+            panelClient.PerformLayout();
             panelCreateTicket.ResumeLayout(false);
+            panelCreateTicket.PerformLayout();
             panelReports.ResumeLayout(false);
+            panelReports.PerformLayout();
             panelConfig.ResumeLayout(false);
+            panelConfig.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -297,14 +296,14 @@
         private Label labelTitle;
         private Label labelCreator;
         private PanelRoundCorner panelConfig;
-        private Button button6;
         private PanelRoundCorner panelReports;
-        private Button button5;
         private PanelRoundCorner panelCreateTicket;
-        private Button button1;
         private PanelRoundCorner panelSales;
-        private Button button3;
         private PanelRoundCorner panelClient;
-        private Button button4;
+        private Label label2;
+        private Label label1;
+        private Label label5;
+        private Label label3;
+        private Label label4;
     }
 }

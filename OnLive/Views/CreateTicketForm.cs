@@ -12,9 +12,18 @@ namespace OnLive.Views
 {
     public partial class CreateTicketForm : Form
     {
+        MainForm mainForm;
         public CreateTicketForm()
         {
             InitializeComponent();
+        }
+
+        private void CreateTicketForm_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+            mainForm = new MainForm();
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point((mainForm.ClientSize.Width - this.Width) / 2, (this.ClientSize.Height - this.Height) / 2);
         }
     }
 }

@@ -34,20 +34,32 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(359, 218);
+            label1.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(384, 208);
             label1.Name = "label1";
-            label1.Size = new Size(83, 15);
+            label1.Size = new Size(436, 86);
             label1.TabIndex = 1;
             label1.Text = "Configuracion";
             // 
-            // Config
+            // ConfigForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            AutoValidate = AutoValidate.Disable;
+            ClientSize = new Size(1440, 733);
+            ControlBox = false;
             Controls.Add(label1);
-            Name = "Config";
-            Text = "Config";
+            FormBorderStyle = FormBorderStyle.None;
+            MaximizeBox = false;
+            MaximumSize = new Size(1440, 733);
+            MinimizeBox = false;
+            Name = "ConfigForm";
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            StartPosition = FormStartPosition.Manual;
+            Text = "Configuracion";
+            TopMost = true;
+            Load += ConfigForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -34,20 +34,32 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(359, 218);
+            label1.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(306, 210);
             label1.Name = "label1";
-            label1.Size = new Size(107, 15);
+            label1.Size = new Size(575, 86);
             label1.TabIndex = 1;
             label1.Text = "Historial de Cliente";
             // 
-            // UserHistory
+            // UserHistoryForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1440, 733);
+            ControlBox = false;
             Controls.Add(label1);
-            Name = "UserHistory";
-            Text = "UserHistory";
+            FormBorderStyle = FormBorderStyle.None;
+            MaximizeBox = false;
+            MaximumSize = new Size(1440, 733);
+            MdiChildrenMinimizedAnchorBottom = false;
+            MinimizeBox = false;
+            Name = "UserHistoryForm";
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            StartPosition = FormStartPosition.Manual;
+            Text = "Historial de Ususario";
+            TopMost = true;
+            Load += UserHistoryForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }

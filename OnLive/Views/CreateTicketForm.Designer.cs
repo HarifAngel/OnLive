@@ -34,20 +34,32 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(359, 218);
+            label1.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(245, 214);
             label1.Name = "label1";
-            label1.Size = new Size(119, 15);
+            label1.Size = new Size(644, 86);
             label1.TabIndex = 1;
             label1.Text = "Crear recibo de venta";
             // 
-            // CreateTicket
+            // CreateTicketForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1440, 733);
+            ControlBox = false;
             Controls.Add(label1);
-            Name = "CreateTicket";
-            Text = "CreateTicket";
+            FormBorderStyle = FormBorderStyle.None;
+            MaximizeBox = false;
+            MaximumSize = new Size(1440, 733);
+            MdiChildrenMinimizedAnchorBottom = false;
+            MinimizeBox = false;
+            Name = "CreateTicketForm";
+            ShowIcon = false;
+            ShowInTaskbar = false;
+            StartPosition = FormStartPosition.Manual;
+            Text = "Crear Recibo";
+            TopMost = true;
+            Load += CreateTicketForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
