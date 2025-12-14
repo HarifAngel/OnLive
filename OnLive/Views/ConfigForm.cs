@@ -12,7 +12,6 @@ namespace OnLive.Views
 {
     public partial class ConfigForm : Form
     {
-        MainForm mainForm;
         public ConfigForm()
         {
             InitializeComponent();
@@ -21,9 +20,6 @@ namespace OnLive.Views
         private void ConfigForm_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
-            mainForm = new MainForm();
-            this.StartPosition = FormStartPosition.Manual;
-            this.Location = new Point((mainForm.ClientSize.Width - this.Width) / 2, (this.ClientSize.Height - this.Height) / 2);
         }
     }
 }

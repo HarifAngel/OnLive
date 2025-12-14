@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            panel1 = new Panel();
             SuspendLayout();
             // 
             // label1
@@ -41,16 +42,25 @@
             label1.TabIndex = 1;
             label1.Text = "Crear recibo de venta";
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(40, 40, 40);
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1440, 64);
+            panel1.TabIndex = 16;
+            // 
             // CreateTicketForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1440, 733);
+            ClientSize = new Size(1245, 600);
             ControlBox = false;
+            Controls.Add(panel1);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;
-            MaximumSize = new Size(1440, 733);
+            MaximumSize = new Size(1245, 600);
             MdiChildrenMinimizedAnchorBottom = false;
             MinimizeBox = false;
             Name = "CreateTicketForm";
@@ -58,7 +68,6 @@
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.Manual;
             Text = "Crear Recibo";
-            TopMost = true;
             Load += CreateTicketForm_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -67,5 +76,6 @@
         #endregion
 
         private Label label1;
+        private Panel panel1;
     }
 }

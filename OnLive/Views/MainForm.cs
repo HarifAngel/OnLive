@@ -17,8 +17,22 @@ namespace OnLive
         //load form function
         private void MainForm_Load(object sender, EventArgs e)
         {
-            this.MinimumSize = new Size(1448, 737);
-            this.MaximumSize = new Size(1448, 737);
+            if (panelContainer == null)
+                MessageBox.Show("panelContainer es NULL");
+        }
+        private void LoadForm(Form form)
+        {
+            if (form == null)
+                throw new ArgumentNullException(nameof(form));
+
+            panelContainer.Controls.Clear();
+
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+
+            panelContainer.Controls.Add(form);
+            form.Show();
         }
         //some componets empty functions
         private void panelRoundCorner1_Paint(object sender, PaintEventArgs e){ }
@@ -35,78 +49,39 @@ namespace OnLive
         //Click panels action
         private void panelSales_Click(object sender, EventArgs e)
         {
-            if (salesZone == null)
-            {
+            if (salesZone == null || salesZone.IsDisposed)
                 salesZone = new SaleZoneForm();
-                salesZone.FormClosed += SalesZone_FormClosed;
-                salesZone.MdiParent = this;
-                salesZone.Show();
-            }
-            else { salesZone.Activate(); }
-        }
-        private void SalesZone_FormClosed(object? sender, FormClosedEventArgs e)
-        {
-            salesZone = null;
+
+            LoadForm(salesZone);
         }
         private void panelClient_Click(object sender, EventArgs e)
         {
-            if (userHistory == null)
-            {
+            if (userHistory == null || userHistory.IsDisposed)
                 userHistory = new UserHistoryForm();
-                userHistory.FormClosed += UserHistory_FormClosed;
-                userHistory.MdiParent = this;
-                userHistory.Show();
-            }
-            else { userHistory.Activate(); }
-        }
-        private void UserHistory_FormClosed(object? sender, FormClosedEventArgs e)
-        {
-            userHistory = null;
+
+            LoadForm(userHistory);
         }
         private void panelCreateTicket_Click(object sender, EventArgs e)
         {
-            if (createTicket == null)
-            {
+            if (createTicket == null || createTicket.IsDisposed)
                 createTicket = new CreateTicketForm();
-                createTicket.FormClosed += CreateTicket_FormClosed;
-                createTicket.MdiParent = this;
-                createTicket.Show();
-            }
-            else { createTicket.Activate(); }
-        }
-        private void CreateTicket_FormClosed(object? sender, FormClosedEventArgs e)
-        {
-            createTicket = null;
+
+            LoadForm(createTicket);
         }
         private void panelReports_Click(object sender, EventArgs e)
         {
-            if (reports == null)
-            {
+            if (reports == null || reports.IsDisposed)
                 reports = new ReportsForm();
-                reports.FormClosed += Reports_FormClosed;
-                reports.MdiParent = this;
-                reports.Show();
-            }
-            else { reports.Activate(); }
-        }
-        private void Reports_FormClosed(object? sender, FormClosedEventArgs e)
-        {
-            reports = null;
+
+            LoadForm(reports);
         }
         private void panelConfig_Click(object sender, EventArgs e)
         {
-            if(config == null)
-            {
+            if (config == null || config.IsDisposed)
                 config = new ConfigForm();
-                config.FormClosed += Config_FormClosed;
-                config.MdiParent = this;
-                config.Show();
-            }
-            else { config.Activate(); }
+
+            LoadForm(config);
         }
-        private void Config_FormClosed(object? sender, FormClosedEventArgs e)
-        {
-            config = null;
-        }
+        
     }
 }

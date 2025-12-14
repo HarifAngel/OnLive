@@ -43,6 +43,7 @@
             label4 = new Label();
             panelConfig = new PanelRoundCorner();
             label5 = new Label();
+            panelContainer = new Panel();
             panelRoundCorner1.SuspendLayout();
             panelSide.SuspendLayout();
             panelSales.SuspendLayout();
@@ -85,11 +86,11 @@
             labelTitle.AutoSize = true;
             labelTitle.Font = new Font("Times New Roman", 21.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             labelTitle.ForeColor = Color.White;
-            labelTitle.Location = new Point(290, 27);
+            labelTitle.Location = new Point(335, 27);
             labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(213, 33);
+            labelTitle.Size = new Size(343, 33);
             labelTitle.TabIndex = 14;
-            labelTitle.Text = "Gestor De Ventas";
+            labelTitle.Text = "Sales Manager Administrator";
             labelTitle.Click += labelTitle_Click;
             // 
             // labelOnLive
@@ -99,9 +100,9 @@
             labelOnLive.ForeColor = Color.White;
             labelOnLive.Location = new Point(23, 18);
             labelOnLive.Name = "labelOnLive";
-            labelOnLive.Size = new Size(177, 55);
+            labelOnLive.Size = new Size(233, 55);
             labelOnLive.TabIndex = 14;
-            labelOnLive.Text = "OnLive";
+            labelOnLive.Text = "CheckOut";
             labelOnLive.Click += labelOnLive_Click;
             // 
             // panelSide
@@ -126,10 +127,10 @@
             panelSales.BorderSize = 0;
             panelSales.Controls.Add(label1);
             panelSales.FillColor = Color.FromArgb(40, 40, 40);
-            panelSales.Location = new Point(0, 52);
+            panelSales.Location = new Point(0, 92);
             panelSales.Margin = new Padding(0);
             panelSales.Name = "panelSales";
-            panelSales.Size = new Size(186, 57);
+            panelSales.Size = new Size(187, 57);
             panelSales.TabIndex = 14;
             panelSales.Click += panelSales_Click;
             panelSales.Paint += panelSales_Paint;
@@ -138,6 +139,7 @@
             // 
             label1.AccessibleRole = AccessibleRole.StaticText;
             label1.AutoSize = true;
+            label1.Enabled = false;
             label1.Font = new Font("Arial", 11F, FontStyle.Bold);
             label1.Location = new Point(41, 20);
             label1.Name = "label1";
@@ -153,7 +155,7 @@
             panelClient.BorderSize = 0;
             panelClient.Controls.Add(label2);
             panelClient.FillColor = Color.FromArgb(40, 40, 40);
-            panelClient.Location = new Point(0, 147);
+            panelClient.Location = new Point(1, 158);
             panelClient.Margin = new Padding(0);
             panelClient.Name = "panelClient";
             panelClient.Size = new Size(186, 57);
@@ -181,7 +183,7 @@
             panelCreateTicket.BorderSize = 0;
             panelCreateTicket.Controls.Add(label3);
             panelCreateTicket.FillColor = Color.FromArgb(40, 40, 40);
-            panelCreateTicket.Location = new Point(0, 221);
+            panelCreateTicket.Location = new Point(1, 224);
             panelCreateTicket.Margin = new Padding(0);
             panelCreateTicket.Name = "panelCreateTicket";
             panelCreateTicket.Size = new Size(186, 57);
@@ -209,7 +211,7 @@
             panelReports.BorderSize = 0;
             panelReports.Controls.Add(label4);
             panelReports.FillColor = Color.FromArgb(40, 40, 40);
-            panelReports.Location = new Point(0, 297);
+            panelReports.Location = new Point(1, 290);
             panelReports.Margin = new Padding(0);
             panelReports.Name = "panelReports";
             panelReports.Size = new Size(186, 57);
@@ -237,10 +239,10 @@
             panelConfig.BorderSize = 0;
             panelConfig.Controls.Add(label5);
             panelConfig.FillColor = Color.FromArgb(40, 40, 40);
-            panelConfig.Location = new Point(0, 450);
+            panelConfig.Location = new Point(0, 488);
             panelConfig.Margin = new Padding(0);
             panelConfig.Name = "panelConfig";
-            panelConfig.Size = new Size(186, 57);
+            panelConfig.Size = new Size(187, 57);
             panelConfig.TabIndex = 14;
             panelConfig.Click += panelConfig_Click;
             panelConfig.Paint += panelConfig_Paint;
@@ -258,17 +260,26 @@
             label5.Text = "Configuracion";
             label5.Click += label5_Click;
             // 
+            // panelContainer
+            // 
+            panelContainer.BackColor = SystemColors.AppWorkspace;
+            panelContainer.Location = new Point(187, 98);
+            panelContainer.Name = "panelContainer";
+            panelContainer.Size = new Size(1245, 600);
+            panelContainer.TabIndex = 20;
+            // 
             // MainForm
             // 
             AutoScaleMode = AutoScaleMode.Inherit;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             AutoValidate = AutoValidate.Disable;
             ClientSize = new Size(1432, 698);
+            Controls.Add(panelContainer);
             Controls.Add(panelSide);
             Controls.Add(panelRoundCorner1);
             ForeColor = Color.White;
-            IsMdiContainer = true;
             MaximizeBox = false;
+            MaximumSize = new Size(1448, 737);
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "On Live";
@@ -305,5 +316,6 @@
         private Label label5;
         private Label label3;
         private Label label4;
+        private Panel panelContainer;
     }
 }
