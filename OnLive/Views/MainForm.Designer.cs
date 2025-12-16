@@ -33,17 +33,19 @@
             labelTitle = new Label();
             labelOnLive = new Label();
             panelSide = new Panel();
+            panel1 = new Panel();
             panelSales = new PanelRoundCorner();
-            label1 = new Label();
+            alwaysEnabledLabel1 = new AlwaysEnabledLabel();
             panelClient = new PanelRoundCorner();
-            label2 = new Label();
+            alwaysEnabledLabel2 = new AlwaysEnabledLabel();
             panelCreateTicket = new PanelRoundCorner();
-            label3 = new Label();
+            alwaysEnabledLabel3 = new AlwaysEnabledLabel();
             panelReports = new PanelRoundCorner();
-            label4 = new Label();
+            alwaysEnabledLabel4 = new AlwaysEnabledLabel();
             panelConfig = new PanelRoundCorner();
-            label5 = new Label();
+            alwaysEnabledLabel5 = new AlwaysEnabledLabel();
             panelContainer = new Panel();
+            pictureBox1 = new PictureBox();
             panelRoundCorner1.SuspendLayout();
             panelSide.SuspendLayout();
             panelSales.SuspendLayout();
@@ -51,6 +53,8 @@
             panelCreateTicket.SuspendLayout();
             panelReports.SuspendLayout();
             panelConfig.SuspendLayout();
+            panelContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panelRoundCorner1
@@ -107,7 +111,8 @@
             // 
             // panelSide
             // 
-            panelSide.BackColor = SystemColors.ActiveCaption;
+            panelSide.BackColor = Color.FromArgb(184, 216, 255);
+            panelSide.Controls.Add(panel1);
             panelSide.Controls.Add(panelSales);
             panelSide.Controls.Add(panelClient);
             panelSide.Controls.Add(panelCreateTicket);
@@ -119,15 +124,23 @@
             panelSide.TabIndex = 12;
             panelSide.Paint += panelSide_Paint;
             // 
+            // panel1
+            // 
+            panel1.BackColor = Color.FromArgb(149, 165, 198);
+            panel1.Location = new Point(1, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(187, 77);
+            panel1.TabIndex = 0;
+            // 
             // panelSales
             // 
             panelSales.BackColor = Color.Transparent;
             panelSales.BorderColor = Color.Transparent;
             panelSales.BorderRadius = 0;
             panelSales.BorderSize = 0;
-            panelSales.Controls.Add(label1);
+            panelSales.Controls.Add(alwaysEnabledLabel1);
             panelSales.FillColor = Color.FromArgb(40, 40, 40);
-            panelSales.Location = new Point(0, 92);
+            panelSales.Location = new Point(0, 163);
             panelSales.Margin = new Padding(0);
             panelSales.Name = "panelSales";
             panelSales.Size = new Size(187, 57);
@@ -135,17 +148,16 @@
             panelSales.Click += panelSales_Click;
             panelSales.Paint += panelSales_Paint;
             // 
-            // label1
+            // alwaysEnabledLabel1
             // 
-            label1.AccessibleRole = AccessibleRole.StaticText;
-            label1.AutoSize = true;
-            label1.Enabled = false;
-            label1.Font = new Font("Arial", 11F, FontStyle.Bold);
-            label1.Location = new Point(41, 20);
-            label1.Name = "label1";
-            label1.Size = new Size(109, 18);
-            label1.TabIndex = 14;
-            label1.Text = "Zona De Venta";
+            alwaysEnabledLabel1.AutoSize = true;
+            alwaysEnabledLabel1.Enabled = false;
+            alwaysEnabledLabel1.Font = new Font("Arial", 11F, FontStyle.Bold);
+            alwaysEnabledLabel1.Location = new Point(41, 19);
+            alwaysEnabledLabel1.Name = "alwaysEnabledLabel1";
+            alwaysEnabledLabel1.Size = new Size(109, 18);
+            alwaysEnabledLabel1.TabIndex = 0;
+            alwaysEnabledLabel1.Text = "Zona De Venta";
             // 
             // panelClient
             // 
@@ -153,27 +165,26 @@
             panelClient.BorderColor = Color.Transparent;
             panelClient.BorderRadius = 0;
             panelClient.BorderSize = 0;
-            panelClient.Controls.Add(label2);
+            panelClient.Controls.Add(alwaysEnabledLabel2);
             panelClient.FillColor = Color.FromArgb(40, 40, 40);
-            panelClient.Location = new Point(1, 158);
+            panelClient.Location = new Point(0, 229);
             panelClient.Margin = new Padding(0);
             panelClient.Name = "panelClient";
-            panelClient.Size = new Size(186, 57);
+            panelClient.Size = new Size(187, 57);
             panelClient.TabIndex = 14;
             panelClient.Click += panelClient_Click;
             panelClient.Paint += panelClient_Paint;
             // 
-            // label2
+            // alwaysEnabledLabel2
             // 
-            label2.AccessibleRole = AccessibleRole.StaticText;
-            label2.AutoSize = true;
-            label2.Enabled = false;
-            label2.Font = new Font("Arial", 11F, FontStyle.Bold);
-            label2.Location = new Point(23, 20);
-            label2.Name = "label2";
-            label2.Size = new Size(144, 18);
-            label2.TabIndex = 15;
-            label2.Text = "Historial de Cliente";
+            alwaysEnabledLabel2.AutoSize = true;
+            alwaysEnabledLabel2.Enabled = false;
+            alwaysEnabledLabel2.Font = new Font("Arial", 11F, FontStyle.Bold);
+            alwaysEnabledLabel2.Location = new Point(22, 20);
+            alwaysEnabledLabel2.Name = "alwaysEnabledLabel2";
+            alwaysEnabledLabel2.Size = new Size(144, 18);
+            alwaysEnabledLabel2.TabIndex = 15;
+            alwaysEnabledLabel2.Text = "Historial de Cliente";
             // 
             // panelCreateTicket
             // 
@@ -181,27 +192,26 @@
             panelCreateTicket.BorderColor = Color.Transparent;
             panelCreateTicket.BorderRadius = 0;
             panelCreateTicket.BorderSize = 0;
-            panelCreateTicket.Controls.Add(label3);
+            panelCreateTicket.Controls.Add(alwaysEnabledLabel3);
             panelCreateTicket.FillColor = Color.FromArgb(40, 40, 40);
-            panelCreateTicket.Location = new Point(1, 224);
+            panelCreateTicket.Location = new Point(0, 295);
             panelCreateTicket.Margin = new Padding(0);
             panelCreateTicket.Name = "panelCreateTicket";
-            panelCreateTicket.Size = new Size(186, 57);
+            panelCreateTicket.Size = new Size(187, 57);
             panelCreateTicket.TabIndex = 14;
             panelCreateTicket.Click += panelCreateTicket_Click;
             panelCreateTicket.Paint += panelCreateTicket_Paint;
             // 
-            // label3
+            // alwaysEnabledLabel3
             // 
-            label3.AccessibleRole = AccessibleRole.StaticText;
-            label3.AutoSize = true;
-            label3.Enabled = false;
-            label3.Font = new Font("Arial", 11F, FontStyle.Bold);
-            label3.Location = new Point(41, 11);
-            label3.Name = "label3";
-            label3.Size = new Size(106, 36);
-            label3.TabIndex = 15;
-            label3.Text = "Crear Recibo \r\n  de Compra";
+            alwaysEnabledLabel3.AutoSize = true;
+            alwaysEnabledLabel3.Enabled = false;
+            alwaysEnabledLabel3.Font = new Font("Arial", 11F, FontStyle.Bold);
+            alwaysEnabledLabel3.Location = new Point(43, 10);
+            alwaysEnabledLabel3.Name = "alwaysEnabledLabel3";
+            alwaysEnabledLabel3.Size = new Size(106, 36);
+            alwaysEnabledLabel3.TabIndex = 15;
+            alwaysEnabledLabel3.Text = "Crear Recibo \r\n  De Compra";
             // 
             // panelReports
             // 
@@ -209,27 +219,26 @@
             panelReports.BorderColor = Color.Transparent;
             panelReports.BorderRadius = 0;
             panelReports.BorderSize = 0;
-            panelReports.Controls.Add(label4);
+            panelReports.Controls.Add(alwaysEnabledLabel4);
             panelReports.FillColor = Color.FromArgb(40, 40, 40);
-            panelReports.Location = new Point(1, 290);
+            panelReports.Location = new Point(1, 361);
             panelReports.Margin = new Padding(0);
             panelReports.Name = "panelReports";
-            panelReports.Size = new Size(186, 57);
+            panelReports.Size = new Size(187, 57);
             panelReports.TabIndex = 14;
             panelReports.Click += panelReports_Click;
             panelReports.Paint += panelReports_Paint;
             // 
-            // label4
+            // alwaysEnabledLabel4
             // 
-            label4.AccessibleRole = AccessibleRole.StaticText;
-            label4.AutoSize = true;
-            label4.Enabled = false;
-            label4.Font = new Font("Arial", 11F, FontStyle.Bold);
-            label4.Location = new Point(58, 18);
-            label4.Name = "label4";
-            label4.Size = new Size(74, 18);
-            label4.TabIndex = 15;
-            label4.Text = "Reportes";
+            alwaysEnabledLabel4.AutoSize = true;
+            alwaysEnabledLabel4.Enabled = false;
+            alwaysEnabledLabel4.Font = new Font("Arial", 11F, FontStyle.Bold);
+            alwaysEnabledLabel4.Location = new Point(59, 19);
+            alwaysEnabledLabel4.Name = "alwaysEnabledLabel4";
+            alwaysEnabledLabel4.Size = new Size(74, 18);
+            alwaysEnabledLabel4.TabIndex = 15;
+            alwaysEnabledLabel4.Text = "Reportes";
             // 
             // panelConfig
             // 
@@ -237,9 +246,9 @@
             panelConfig.BorderColor = Color.Transparent;
             panelConfig.BorderRadius = 0;
             panelConfig.BorderSize = 0;
-            panelConfig.Controls.Add(label5);
+            panelConfig.Controls.Add(alwaysEnabledLabel5);
             panelConfig.FillColor = Color.FromArgb(40, 40, 40);
-            panelConfig.Location = new Point(0, 488);
+            panelConfig.Location = new Point(0, 502);
             panelConfig.Margin = new Padding(0);
             panelConfig.Name = "panelConfig";
             panelConfig.Size = new Size(187, 57);
@@ -247,26 +256,34 @@
             panelConfig.Click += panelConfig_Click;
             panelConfig.Paint += panelConfig_Paint;
             // 
-            // label5
+            // alwaysEnabledLabel5
             // 
-            label5.AccessibleRole = AccessibleRole.StaticText;
-            label5.AutoSize = true;
-            label5.Enabled = false;
-            label5.Font = new Font("Arial", 11F, FontStyle.Bold);
-            label5.Location = new Point(41, 20);
-            label5.Name = "label5";
-            label5.Size = new Size(108, 18);
-            label5.TabIndex = 15;
-            label5.Text = "Configuracion";
-            label5.Click += label5_Click;
+            alwaysEnabledLabel5.AutoSize = true;
+            alwaysEnabledLabel5.Enabled = false;
+            alwaysEnabledLabel5.Font = new Font("Arial", 11F, FontStyle.Bold);
+            alwaysEnabledLabel5.Location = new Point(41, 20);
+            alwaysEnabledLabel5.Name = "alwaysEnabledLabel5";
+            alwaysEnabledLabel5.Size = new Size(108, 18);
+            alwaysEnabledLabel5.TabIndex = 15;
+            alwaysEnabledLabel5.Text = "Configuracion";
             // 
             // panelContainer
             // 
-            panelContainer.BackColor = SystemColors.AppWorkspace;
+            panelContainer.BackColor = SystemColors.Control;
+            panelContainer.Controls.Add(pictureBox1);
             panelContainer.Location = new Point(187, 98);
             panelContainer.Name = "panelContainer";
             panelContainer.Size = new Size(1245, 600);
             panelContainer.TabIndex = 20;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.Transparent;
+            pictureBox1.Location = new Point(77, 150);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(100, 50);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
@@ -297,6 +314,8 @@
             panelReports.PerformLayout();
             panelConfig.ResumeLayout(false);
             panelConfig.PerformLayout();
+            panelContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -311,11 +330,13 @@
         private PanelRoundCorner panelCreateTicket;
         private PanelRoundCorner panelSales;
         private PanelRoundCorner panelClient;
-        private Label label2;
-        private Label label1;
-        private Label label5;
-        private Label label3;
-        private Label label4;
         private Panel panelContainer;
+        private Panel panel1;
+        private AlwaysEnabledLabel alwaysEnabledLabel1;
+        private AlwaysEnabledLabel alwaysEnabledLabel5;
+        private AlwaysEnabledLabel alwaysEnabledLabel2;
+        private AlwaysEnabledLabel alwaysEnabledLabel3;
+        private AlwaysEnabledLabel alwaysEnabledLabel4;
+        private PictureBox pictureBox1;
     }
 }

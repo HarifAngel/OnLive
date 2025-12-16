@@ -28,36 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             panel1 = new Panel();
+            label3 = new Label();
+            panel1.SuspendLayout();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 48F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(361, 210);
-            label1.Name = "label1";
-            label1.Size = new Size(448, 86);
-            label1.TabIndex = 0;
-            label1.Text = "Zona de Venta";
             // 
             // panel1
             // 
-            panel1.BackColor = Color.FromArgb(40, 40, 40);
+            panel1.BackColor = Color.FromArgb(79, 104, 146);
+            panel1.Controls.Add(label3);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1440, 64);
-            panel1.TabIndex = 16;
+            panel1.Size = new Size(1245, 77);
+            panel1.TabIndex = 17;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(116, 18);
+            label3.Name = "label3";
+            label3.Size = new Size(157, 30);
+            label3.TabIndex = 18;
+            label3.Text = "Zona De Venta";
             // 
             // SaleZoneForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(1245, 600);
             ControlBox = false;
             Controls.Add(panel1);
-            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
             MaximizeBox = false;
             MaximumSize = new Size(1245, 600);
@@ -69,13 +72,14 @@
             StartPosition = FormStartPosition.Manual;
             Text = "Zona de Venta";
             Load += SaleZoneForm_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
         private Panel panel1;
+        private Label label3;
     }
 }
